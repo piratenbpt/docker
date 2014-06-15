@@ -7,6 +7,22 @@ echo "$USERNAME:$PASSWORD" | chpasswd
 
 cupsd -f & PID=$!
 
-# TODO add classes, printers, ...
+sleep 1
 
-fg $PID
+# Add printers
+for i in $(env | grep "^PRINTER_" | awk -F_ '{ print $1"_"$2 }' | sort | uniq); do
+	v="${i}_NAME";		name="${!v}"
+	v="${i}_DEVICE";	device="${!v}"
+	v="${i}_PPD";		ppd="${!v}"
+	v="${i}_CLASSES";	classes="${!v}"
+
+	[ -z "$ppd" ] \
+		&& lpadmin -p "$name" -E -v "$device" \
+		|| lpadmin -p "$name" -E -v "$device" -m "$ppd"
+
+	for class in $classes; do
+		lpadmin -p "$name" -c "$class"
+	done
+done
+
+wait $PID
