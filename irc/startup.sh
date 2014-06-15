@@ -2,6 +2,7 @@
 
 PASSWORD_CONNECT=""
 PASSWORD_OPER="secret"
+PASSWORD_WEBCHAT="passwordhere"
 REMOTE_TYPE=""
 
 # prepare configuration
@@ -11,6 +12,7 @@ function replaceParameter() {
 
 cat /etc/charybdis/ircd.conf.sample \
 	| replaceParameter "PASSWORD-CONNECT" "$PASSWORD_CONNECT" \
+	| replaceParameter "PASSWORD-WEBCHAT" "$PASSWORD_WEBCHAT" \
 	| replaceParameter "PASSWORD-OPER" "$PASSWORD_OPER" \
 	> /etc/charybdis/ircd.conf
 

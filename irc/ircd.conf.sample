@@ -32,6 +32,8 @@
 #loadmodule "extensions/sno_whois.so";
 #loadmodule "extensions/override.so";
 
+loadmodule "extensions/m_webirc.so";
+
 /*
  * IP cloaking extensions: use ip_cloaking_4.0
  * if you're linking 3.2 and later, otherwise use
@@ -160,6 +162,13 @@ listen {
  * that matches a user will be used.  So place spoofs first, then specials,
  * then general access, then restricted.
  */
+
+auth {
+	user = "*webchat@*";
+	password = "{PASSWORD_WEBCHAT}";
+	spoof = "webirc.";
+	class = "users";
+};
 
 auth {
 	user = "*@*";
