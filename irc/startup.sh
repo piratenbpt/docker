@@ -1,9 +1,5 @@
 #!/bin/bash
 
-PASSWORD_CONNECT=""
-PASSWORD_OPER="secret"
-PASSWORD_WEBCHAT="passwordhere"
-REMOTE_TYPE=""
 
 # prepare configuration
 function replaceParameter() {

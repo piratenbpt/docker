@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PASSWORD_WEBCHAT="passwordhere"
+[ -z "$PASSWORD_WEBCHAT" ] && PASSWORD_WEBCHAT="$IRC_ENV_PASSWORD_WEBCHAT"
 
 cd /qwebirc
 
