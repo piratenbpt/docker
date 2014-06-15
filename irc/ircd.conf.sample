@@ -45,11 +45,11 @@ loadmodule "extensions/m_webirc.so";
 #loadmodule "extensions/ip_cloaking.so";
 
 serverinfo {
-	name = "local.piraten-bpt.de";
-	sid = "100";
-	description = "Piraten-BPT local IRCd";
-	network_name = "PiratenBPT";
-	network_desc = "Orga-network to coordinate BPT";
+	name = "{SERVERNAME}";
+	sid = "{SERVERID}";
+	description = "{SERVERDESC}";
+	network_name = "{NETWORKNAME}";
+	network_desc = "{NETWORKDESC}";
 	hub = yes;
 
 	/* On multi-homed hosts you may need the following. These define
@@ -90,20 +90,20 @@ serverinfo {
 };
 
 admin {
-	name = "PiratenBPT NOC";
-	description = "NOC des PiratenBPT";
-	email = "noc@piraten-bpt.de";
+	name = "{ADMINMAME}";
+	description = "{ADMINDESC}";
+	email = "{ADMINMAIL}";
 };
 
 log {
-	fname_userlog = "logs/userlog";
+	#fname_userlog = "logs/userlog";
 	#fname_fuserlog = "logs/fuserlog";
-	fname_operlog = "logs/operlog";
+	#fname_operlog = "logs/operlog";
 	#fname_foperlog = "logs/foperlog";
-	fname_serverlog = "logs/serverlog";
+	#fname_serverlog = "logs/serverlog";
 	#fname_klinelog = "logs/klinelog";
-	fname_killlog = "logs/killlog";
-	fname_operspylog = "logs/operspylog";
+	#fname_killlog = "logs/killlog";
+	#fname_operspylog = "logs/operspylog";
 	#fname_ioerrorlog = "logs/ioerror";
 };
 
