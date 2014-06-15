@@ -47,7 +47,7 @@ EOT
 		cat >> /etc/charybdis/ircd.conf <<EOT
 connect "$name" {
 	host = "$host";
-	port = "$port";
+	port = $port;
 	send_password = "$password_send";
 	accept_password = "$password_accept";
 	hub_mask = "*";
