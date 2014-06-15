@@ -43,7 +43,7 @@
 #loadmodule "extensions/ip_cloaking.so";
 
 serverinfo {
-	name = "irc.piraten-bpt.local";
+	name = "local.piraten-bpt.de";
 	sid = "100";
 	description = "Piraten-BPT local IRCd";
 	network_name = "PiratenBPT";

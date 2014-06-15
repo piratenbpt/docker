@@ -1,5 +1,5 @@
 FROM piratenbpt/base
-RUN apt-get install -y charybdis
+RUN apt-get install -y charybdis stunnel
 ADD startup.sh /startup.sh
 ADD ircd.motd /etc/charybdis/ircd.motd
 ADD ircd.conf.sample /etc/charybdis/ircd.conf.sample
