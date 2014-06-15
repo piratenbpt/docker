@@ -9,7 +9,7 @@ function replaceParameter() {
 }
 
 cat config.py.sample \
-	| replaceParameter "PASSWORD-WEBCHAT" "$PASSWORD_WEBCHAT" \
+	| replaceParameter "PASSWORD_WEBCHAT" "$PASSWORD_WEBCHAT" \
 	> config.py
 
 ./compile.py

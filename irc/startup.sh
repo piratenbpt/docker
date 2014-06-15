@@ -15,9 +15,9 @@ cat /etc/charybdis/ircd.conf.sample \
 	| replaceParameter "ADMINNAME" "$ADMINNAME" \
 	| replaceParameter "ADMINMAIL" "$ADMINMAIL" \
 	| replaceParameter "ADMINDESC" "$ADMINDESC" \
-	| replaceParameter "PASSWORD-CONNECT" "$PASSWORD_CONNECT" \
-	| replaceParameter "PASSWORD-WEBCHAT" "$PASSWORD_WEBCHAT" \
-	| replaceParameter "PASSWORD-OPER" "$PASSWORD_OPER" \
+	| replaceParameter "PASSWORD_CONNECT" "$PASSWORD_CONNECT" \
+	| replaceParameter "PASSWORD_WEBCHAT" "$PASSWORD_WEBCHAT" \
+	| replaceParameter "PASSWORD_OPER" "$PASSWORD_OPER" \
 	> /etc/charybdis/ircd.conf
 
 for i in $(env | grep "^REMOTE_" | awk -F_ '{ print $1"_"$2 }' | sort | uniq); do

@@ -90,7 +90,7 @@ serverinfo {
 };
 
 admin {
-	name = "{ADMINMAME}";
+	name = "{ADMINNAME}";
 	description = "{ADMINDESC}";
 	email = "{ADMINMAIL}";
 };
@@ -172,7 +172,7 @@ auth {
 
 auth {
 	user = "*@*";
-	password = "{PASSWORD-CONNECT}";
+	password = "{PASSWORD_CONNECT}";
 	class = "users";
 };
 
@@ -212,7 +212,7 @@ operator "admin" {
 	 * contained in flags = ...; this will need to be encrypted using 
 	 * mkpasswd, MD5 is supported
 	 */
-	password = "{PASSWORD-OPER}";
+	password = "{PASSWORD_OPER}";
 
 	/* rsa key: the public key for this oper when using Challenge.
 	 * A password should not be defined when this is used, see 
