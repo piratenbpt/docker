@@ -2,6 +2,4 @@
 
 # prepare configuration
 
-# start stunnel
-
 # start ircd
