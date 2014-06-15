@@ -1,6 +1,8 @@
 #!/bin/bash
 
 [ -z "$PASSWORD_WEBCHAT" ] && PASSWORD_WEBCHAT="$IRC_ENV_PASSWORD_WEBCHAT"
+[ -z "$NETWORKNAME" ] && NETWORKNAME="$IRC_ENV_NETWORKNAME"
+[ -z "$ADMINMAIL" ] && ADMINMAIL="$IRC_ENV_ADMINMAIL"
 
 cd /qwebirc
 
@@ -10,6 +12,8 @@ function replaceParameter() {
 
 cat config.py.sample \
 	| replaceParameter "PASSWORD_WEBCHAT" "$PASSWORD_WEBCHAT" \
+	| replaceParameter "NETWORKNAME" "$NETWORKNAME" \
+	| replaceParameter "ADMINMAIL" "$ADMINMAIL" \
 	> config.py
 
 ./compile.py

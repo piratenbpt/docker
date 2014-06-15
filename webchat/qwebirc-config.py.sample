@@ -95,7 +95,7 @@ BASE_URL = "http://webchat.piraten-bpt.de/"
 # OPTION: NETWORK_NAME
 #         The name of your IRC network, displayed throughout the
 #         application.
-NETWORK_NAME = "PiratenBPT"
+NETWORK_NAME = "{NETWORKNAME}"
 
 # OPTION: ANALYTICS_HTML
 #         If you have an analytics service, you can paste the HTML
@@ -146,11 +146,11 @@ NICKNAME_MAXIMUM_LENGTH = 15
 #
 # OPTION: FEEDBACK_FROM
 #         E-mail address that feedback will originate from.
-FEEDBACK_FROM = "noc@piraten-bpt.de"
+FEEDBACK_FROM = "{ADMINMAIL}"
 
 # OPTION: FEEDBACK_TO:
 #         E-mail address that feedback will be sent to.
-FEEDBACK_TO = "noc@piraten-bpt.de"
+FEEDBACK_TO = "{ADMINMAIL}"
 
 # OPTION: FEEDBACK_SMTP_HOST
 #         Hostname/IP address of SMTP server feedback will be sent
