@@ -18,7 +18,10 @@ from qwebirc.config_options import *
 #         Hostname (or IP address) of IRC server to connect to.
 # OPTION: IRCPORT
 #         Port of IRC server to connect to.
-IRCSERVER, IRCPORT = "irc", 6667
+# OPTION: IRCPASSWORD
+#         Global Serverpassword (added by password.patch)
+IRCSERVER, IRCPORT = "irc", 15000
+IRCPASSWORD = "{PASSWORD_CONNECT}"
 
 # OPTION: SSLPORT
 #         SSL port of IRC server to connect to.
