@@ -164,7 +164,7 @@ listen {
  */
 
 auth {
-	user = "*webchat@*";
+	user = "*@127.0.0.1";
 	password = "{PASSWORD_WEBCHAT}";
 	spoof = "webirc.";
 	class = "users";

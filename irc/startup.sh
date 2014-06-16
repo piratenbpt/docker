@@ -58,5 +58,8 @@ EOT
 	fi
 done
 
+# needed for remote webchat (i hate charybdis)
+rinetd
+
 # start ircd
 sudo -u charybdis /usr/bin/charybdis-ircd -foreground
