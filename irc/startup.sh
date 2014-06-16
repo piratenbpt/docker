@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # prepare configuration
 function replaceParameter() {
 	sed "s/{${1}}/$(echo $2 | sed -e 's/\\/\\\\/g' -e 's/\//\\\//g' -e 's/&/\\\&/g')/g"
