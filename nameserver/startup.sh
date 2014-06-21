@@ -9,6 +9,9 @@ for i in ${FORWARDERS//,/ }; do
 echo	"		$i;"
 done
 echo	"	};"
+echo	"	allow-recursion {"
+echo	"		0.0.0.0/0;"
+echo	"	};"
 echo	"	dnssec-validation auto;"
 echo	"	auth-nxdomain no;"
 echo	"};"
