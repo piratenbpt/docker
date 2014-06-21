@@ -42,4 +42,4 @@ for i in $(env | grep "^ZONE_SLAVE_" | awk -F_ '{ print $1"_"$2"_"$3 }' | sort |
 	echo	"};"
 done > /etc/bind/named.conf.local
 
-sudo -u bind named -f
+named -u bind -f
